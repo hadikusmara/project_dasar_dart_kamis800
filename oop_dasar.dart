@@ -5,6 +5,8 @@ class karyawan {
   var _name;
   var _address;
   var _umur;
+  var _bayar;
+
   String getName() {
     return this._name;
   }
@@ -28,6 +30,15 @@ class karyawan {
   void setumur(int umur) {
     this._umur = umur;
   }
+
+  double getbayar() {
+    return this._bayar;
+  }
+
+  void setbayar(double bayar) {
+    bayar = bayar * 8;
+    this._bayar = bayar;
+  }
 }
 
 // fungsi main
@@ -36,7 +47,9 @@ main() {
   kry.setName("Dian");
   kry.setAddress("bekasi");
   kry.setumur(30);
+  kry.setbayar(3000.45);
   print("Nama: ${kry.getName()}");
   print("Alamat: ${kry.getAddress()}");
   print("Umur: ${kry.getumur()}");
+  print("Bayar: ${kry.getbayar()}");
 }
